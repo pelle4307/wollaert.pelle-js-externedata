@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Tilt+Warp&display=swap');
+
+@font-face {
+    font-family: "Triforce";
+    src: url("../fonts/Triforce.ttf")
+}
+
+@font-face {
+    font-family: "Academy";
+    src: url("../fonts/Academy.ttf")
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Tilt Warp', cursive;
+}
+header,nav,main,footer {
+    width: 100vw;
+}
+
+/* NAV */
+
+nav {
+    height: 20vh;
+    position: fixed;
+    display: flex;
+    background-image: url("../Images/cloud_bit.png"),
+    linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 20%, rgba(255,255,255,1) 100%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+nav img#logo {
+    height: 100px;
+    margin: 10px;   
+}
+li {
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 25px;
+}
+li a {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+a:link, a:hover, a:active, a:visited {
+    color:black;
+    text-decoration: none;
+}
+nav form {
+    position: absolute;
+    right: 0px;
+}
+nav form input {
+    border: none;
+    background-color: unset;
+    background-image: url("../images/OoT3D_Lens_of_Truth_Model.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-left: 20px;
+    font-size: 14px;
+    margin-top: 49px;
+    margin-right: 25px;
+    width: 20px;
+
+    outline: transparent;
+    transition: 0.6s;
+    
+}
+nav form input:focus {
+    transition: 0.6s;
+    width: 200px;
+}
+
+/* HEADER */
+
+header {
+    height: 100vh;
+    background-image: url("../Images/wallpaperflare.com_wallpaper.jpg");
+    background-size: cover;
+}
+h1.quote {
+    text-align: center;
+    top: 20vh;
+    font-family: 'Triforce', serif;
+    font-size: 36px;
+    font-weight: 700;
+    position: sticky;
+    text-shadow: -1px 4px 10px rgba(150, 175, 185, 0.9);
+    padding-bottom: 30px;
+    letter-spacing: 1;
+    
+}
+h1.quote2 {
+    text-align: center;
+    top: 40vh;
+    font-family: 'Academy';
+    font-size: 20px;
+    position: sticky;
+    text-shadow: -1px 4px 10px rgba(150, 175, 185, 0.9);
+    padding-bottom: 30px;
+    letter-spacing: 1;
+    width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1.quote_author {
+    text-align: center;
+    top: 26vh;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 12px;
+    font-weight: 700;
+    font-style: italic;
+    position: sticky;
+    text-shadow: -1px 4px 10px rgba(150, 175, 185, 0.9);
+    padding-bottom: 15px;
+    padding-bottom: 20px;
+}
+
+/* MAIN */
+
+main {
+    background-color: #fdffe0;
+    display: flow-root;
+}
+main img.triforce {
+    opacity: 0;
+    opacity: 1;
+    
+    width: 90%;
+    margin-top: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+main img.triforce:hover {
+    opacity: 1.0;
+    transition: 2s;
+}
+article {
+    min-width: 500px;
+    width: 50%;
+    min-height: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+article img {
+    display: block;
+    margin-right: 10px;
+    width: calc(50% - 10px);
+    height: 450px;
+    box-sizing: border-box;
+    float: left;
+    object-fit: cover;
+}
+article h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: bold;
+    font-style: italic;
+    width: 50%;
+    box-sizing: border-box;
+    float: left;
+    font-size: 20px;
+    clear: right;
+    margin-bottom: 15px;
+}
+article h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 50%;
+    box-sizing: border-box;
+    float: left;
+    font-size: 10px;
+    clear: right;
+    margin-bottom: 5px;
+}
+article p {
+    width: 50%;
+    min-height: 50px;
+    box-sizing: border-box;
+    float: left;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+article.left {
+    float: left;
+}
+article.right {
+    float: right;
+}
+
+/* FOOTER */
+
+footer{
+    height: 20vh;
+    background-color: #398eb4;
+}
+footer img#logo_footer {
+    height: 45px;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    filter: invert(none);
+}
+footer p {
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 10px;
+    margin-top: 10px;
+}
+footer p#disclaimer {
+    text-align: left;
+    hyphens: auto;
+    font-size: 7px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    color: white;
+    opacity: 0.5;
+}
+footer a:link, footer a:active, footer a:hover, footer a:visited {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
