@@ -5,36 +5,44 @@
         <title>Zelda Wiki</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
+        <script src="./js/script.js" defer></script>
     </head>
+    
     <body> 
         <nav>
-            <img id="logo" src="Images/1920px-The_Legend_of_Zelda_Breath_of_the_Wild_Logo.png" alt="The Legend of Zelda BOTW logo">
+            <img id="logo" src="img/Zelda_Logo.svg.png" alt="The Legend of Zelda logo">
             <ol>
                 <li><a href="#header">home</a></li>
                 <li><a href="#main">the triforce</a></li>
                 <li><a href="#locations">regions</a></li>
                 <li><a href="#footer">info</a></li>
             </ol>
-            <form action="">
+            <form action="searchbar">
                 <input type="text" autocomplete="off">
-
             </form>
         </nav>
         <header id="header">
             <h1 class="quote">
-                You are the light. our light... that must shine upon hyrule once again.
+                Welcome to the best Zelda Wiki !
             </h1>
             <h1 class="quote_author">
-                - Zelda -
+                - Pelle Wollaert -
             </h1>
             <h1 class="quote2">
                 The Legend of Zelda is a computer game series created by Shigeru Miyamoto, the first game of which was released in 1986 for the Japanese Famicom Disk System.
             </h1>
         </header>
         <main id="main">
-            <img class="triforce" src="Images/Triforce.png" alt="Triforce Explained">
+            
+            <div id="zelda-search-component">
+                <h4>Search thru our best The Legend of Zelda wiki catalog:</h4>
+                <input type="text" id="searchInput" placeholder="Enter game name" onkeyup="fetchZeldaGameInfo()">
+                <div id="results"></div>
+            </div>
+
+            <img class="triforce" src="img/Triforce.png" alt="Triforce Explained">
             <article id="locations" class="left">
-                <img src="Images/ezgif.com-webp-to-jpg (2).jpg" alt="">
+                <img src="img/The_Hyrule_Region.jpg" alt="Landscape of The Hyrule Region">
                 <h2>The Hyrule Region</h2>
                 <h3>Description</h3>
                 <p>Central Hyrule is the central Region of Hyrule Kingdom, containing the Great Plateau, Hyrule Field and the Hyrule Ridge. Central Hyrule was burned in the Great Calamity a hundred years ago.[3] Link begins his quest in this Region after waking up in the Shrine of Resurrection on the Great Plateau. At the northern edge of Central Hyrule lies Hyrule Castle, which holds Calamity Ganon.
@@ -42,19 +50,19 @@
                     It is known, during the time of Calamity Ganon, as one of the most dangerous Regions in Hyrule Kingdom, due to vast amounts of Guardians being present there and myriad monsters, such as Bokoblins.</p>
             </article>
             <article class="left">
-                <img src="Images/ezgif.com-webp-to-jpg.jpg" alt="">
+                <img src="img/The_Gerudo_Region.jpg" alt="Landscape of The Gerudo Region">
                 <h2>The Gerudo Region</h2>
                 <h3>Description</h3>
                 <p>The Gerudo Region is located in the southwest of Hyrule and has both a massive desert and rocky mountains. The difference between the Gerudo Desert's scorching-hot days and frigid nights is extreme, but hearty Molduga monsters, sand seals, and Voltfruit-bearing cacti thrive in spite of the tremendous temperature swings. There are oases in the desert as well, and the Gerudo have built their own city in the center of the desert around the largest one. Isolated by Gerudo Canyon and the Gerudo Desert, the culture of the Gerudo developed separately from the rest of Hyrule and is unique for that reason.</p>
             </article>
             <article class="right">
-                <img src="Images/70476d14d3058fdc8429e4ed59b4d676.png" alt="">
+                <img src="img/The_Hebra_Region.png" alt="">
                 <h2>The Hebra Region</h2>
                 <h3>Description</h3>
                 <p>The Hebra province is located in northwest Hyrule. It is geographically isolated from the neighboring Central Hyrule by the enormous Tanagar Canyon, which cuts between the two areas from northeast to southwest and creates their shared border. The Tabantha Frontier in the southern tip of the region is a land of little grass, few trees, and exposed rock, while to the north are the Hebra Mountains - a frigid range with high elevation and low temperatures. Rito Village is located in Hebra, but that is the only large settlement in a region of few inhabitants and fewer travelers.</p>
             </article>
             <article class="right">
-                <img src="Images/ezgif.com-webp-to-jpg (1).jpg" alt="">
+                <img src="img/The_Eldin_Region.jpg" alt="">
                 <h2>The Eldin Region</h2>
                 <h3>Description</h3>
                 <p>The Eldin Region is located in the northeast of Hyrule. This scorched terrain extends out from its volcano Death Mountain center. It is so hot that simply placing objects on the ground is enough for them to burst into flame. If a non-Goron is going to explore this place, preparation is required. Following Eldin Canyon will lead one into Goron City, home of the Gorons. Along the way is the Southern Mine, where members of the Goron Group Mining Company are excavating ore.</p>
@@ -62,7 +70,7 @@
        
         </main>
         <footer id="footer">
-            <img src="Images/1920px-The_Legend_of_Zelda_Breath_of_the_Wild_Logo.png" alt="company_logo"
+            <img src="img/Zelda_Logo.svg.png" alt="The Legend of Zelda logo"
             id="logo_footer">
             <p>
                 <a href="#header">Home</a>
@@ -70,7 +78,7 @@
                 <a href="#">Regions</a>
                 <a href="#">Info</a>
             </p>
-            <p id="disclaimer">DISCLAIMER: The information provided by a shop on a website is for general informational purposes only. All information on the website is provided in good faith, however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the website. Under no circumstance shall we have any liability to you for any loss or damage of any kind incurred as a result of the use of the website or reliance on any information provided on the website. Your use of the website and your reliance on any information on the website is solely at your own risk.</p>
+            <p id="disclaimer">DISCLAIMER: The information provided on our website is for general informational purposes only. All information on the website is provided in good faith, however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the website. Under no circumstance shall we have any liability to you for any loss or damage of any kind incurred as a result of the use of the website or reliance on any information provided on the website. Your use of the website and your reliance on any information on the website is solely at your own risk.</p>
         </footer>
     </body>
 </html>
