@@ -8,6 +8,7 @@ async function fetchZeldaGameInfo() {
     try {
       const response = await fetch(`https://zelda.fanapis.com/api/games?name=${query}`);
       const data = await response.json();
+      console.log("Data ", data)
   
       const uniqueGames = new Set();
       if (data.data && data.data.length > 0) {
